@@ -1,22 +1,22 @@
 const TabbarShow = (
-    prevState = {
-      show: true,
-    },
-    action
-  ) => {
-    let newState = { ...prevState };
+  prevState = {
+    show: true,
+  },
+  action
+) => {
+  let newState = { ...prevState };
 
-    switch (action.type) {
-      case "kerwinhide-tabbar":
-        newState.show = false;
-        return newState;
-      case "kerwinshow-tabbar":
-        newState.show = true;
-        return newState;
+  switch (action.type) {
+    case "kerwinhide-tabbar":
+      newState.show = false;
+      return newState;
+    case "kerwinshow-tabbar":
+      newState.show = true;
+      return newState;
 
-      default:
-        return prevState;
-    }
-  };
+    default:
+      return prevState;
+  }
+};
 
-export default TabbarShow
+export default TabbarShow;
